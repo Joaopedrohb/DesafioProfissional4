@@ -19,5 +19,9 @@ public class Paciente extends Pessoa {
     public UBS getUbs() {
         return ubs;
     }
+
+    public void confirmarExame(Boolean confirmado, Exame exame) {
+        exame.setConfirmacao(confirmado);
+    }
     //Confirmar consulta
 }

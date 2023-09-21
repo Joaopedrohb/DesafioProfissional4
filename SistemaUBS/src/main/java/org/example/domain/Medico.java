@@ -1,7 +1,10 @@
 package org.example.domain;
 
+import org.example.enums.TipoExame;
+import org.example.enums.TipoRemedio;
 import org.example.enums.UBS;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Medico extends Pessoa{
@@ -28,12 +31,15 @@ public class Medico extends Pessoa{
         return ubs;
     }
 
-    public void gerarAtestado() {
-        Scanner le = new Scanner(System.in);
-        String dias = "3 dias";
-        Integer cid = 1234;
-        Atestado teste = new Atestado(cid, dias);
+    public void gerarAtestado(Integer cid, String dias) {
+        Atestado testeAtestado = new Atestado(cid, dias);
     }
 
+    public void gerarExame(TipoExame tipoExame, LocalDate horario, String indicacoes) {
+        Exame testeExame = new Exame(tipoExame, horario, indicacoes);
+    }
+    public void gerarReceita(TipoRemedio tipoRemedio, String dosagem, String obsercacoes) {
+        Receita testeReceita = new Receita(tipoRemedio, dosagem, obsercacoes);
+    }
     //Gerar atestado, gerar receita, gerar exame
 }
